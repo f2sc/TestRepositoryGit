@@ -2,3 +2,8 @@ h1 {
 	color: #da5000;
 	font-family: open sans;
 }
+
+.cabecera{
+    border: 1px solid gray;
+    padding: 20px;
+}
