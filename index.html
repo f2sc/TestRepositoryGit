@@ -1,58 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Bienvenido al index</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
 	<body>
         <div class="cabecera">
-            Esto es la cabecera, esto está en el branch cabecera!!
-
+			<p>Esto es la cabecera, esto está en el branch cabecera!!</p>
+			<a href="pagina.php">Ir a pagina.php</a>
         </div>
-		<h1>Estás en el index</h1>
-		<p>Nuestra empresa se dedica a dar servicios de calidad a todo el mundo.</p>
-		ESTO LO HE CAMBIADO DESDE LA RAMA PAGCLIENTE (Por ende no debe aparecer en la rama MASTER)
-        <p>Empezamos otra vez por culpa de un hard reset jeje</p>
-		<p>Aquí hemos hecho cambios.</p>
-		<h3>Códigos de Git:</h3>
-		<p>Todos los comandos de GIT tienen que empezar escribiendo la palabra git.</p>
-		<ul>
-			<li>Init: Inicia un nuevo Git. Es el primer comando para crear toda la carpeta y la estructura de GIT.</li>
-			<li>add [nombre archivo]: Añade a staging el archivo</li>
-			<li>add . : Añade a staging todos los archivos que no lo estén</li>
-			<li>commit -m "[texto del commit]" : Envía los archivos de staging al repositorio</li>
-			<li>commit -am "[texto del commit]" : Añade a staging todos los archivos que no lo estén y envía los archivos de staging al repositorio</li>
-			<li>status: Sirve para ver en qué estado están los archivos.</li>
-			<li>log: muestra el historico de commits etc.</li>
-			<li>push [nombre rama local] [nombre rama remota] [url del repositorio remoto]: Sirve para subir todo el código del repositorio en local a internet, puede ser a github, gitlab o bitbucket.</li>
-			<li>checkout [nombre]: Sirve para moverte a: una versión, o rama, tag... Te coloca en esa versión.</li>
-			<li>pull [nombre rama local] [nombre rama remota] [url del repositorio remoto]: Sirve para traerse todo el código de la rama remota que le decimos a la rama local que le decimos</li>
-			<li>pull : Sirve para traerse todo el código.</li>
-			<li>reset : Elimina el commit y deja los cambios en stage y con --hard elimina totalmente los cambios.</li>
-		</ul>
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span10">
+					<!--Body content-->
+					<h1>Estás en el index</h1>
+					<p>Nuestra empresa se dedica a dar servicios de calidad a todo el mundo.</p>
+					ESTO LO HE CAMBIADO DESDE LA RAMA PAGCLIENTE (Por ende no debe aparecer en la rama MASTER)
+					<p>Empezamos otra vez por culpa de un hard reset jeje</p>
+					<p>Aquí hemos hecho cambios.</p>
+					<h3>Códigos de Git:</h3>
+					<p>Todos los comandos de GIT tienen que empezar escribiendo la palabra git.</p>
+					<ul>
+						<li>Init: Inicia un nuevo Git. Es el primer comando para crear toda la carpeta y la estructura de GIT.</li>
+						<li>add [nombre archivo]: Añade a staging el archivo</li>
+						<li>add . : Añade a staging todos los archivos que no lo estén</li>
+						<li>commit -m "[texto del commit]" : Envía los archivos de staging al repositorio</li>
+						<li>commit -am "[texto del commit]" : Añade a staging todos los archivos que no lo estén y envía los archivos de staging al repositorio</li>
+						<li>status: Sirve para ver en qué estado están los archivos.</li>
+						<li>log: muestra el historico de commits etc.</li>
+						<li>push [nombre rama local] [nombre rama remota] [url del repositorio remoto]: Sirve para subir todo el código del repositorio en local a internet, puede ser a github, gitlab o bitbucket.</li>
+						<li>checkout [nombre]: Sirve para moverte a: una versión, o rama, tag... Te coloca en esa versión.</li>
+						<li>pull [nombre rama local] [nombre rama remota] [url del repositorio remoto]: Sirve para traerse todo el código de la rama remota que le decimos a la rama local que le decimos</li>
+						<li>pull : Sirve para traerse todo el código.</li>
+						<li>reset : Elimina el commit y deja los cambios en stage y con --hard elimina totalmente los cambios.</li>
+					</ul>
 
-		<h3>Buenas pácticas GIT</h3>
-		<h5>Ramas (Branch)</h5>
-		<p>La rama MASTER es la que tiene el código que se desplegará en producción.</p>
-		<p>La rama TEST es la que tiene el código que se desplegará en TESTing para hacer pruebas.</p>
-		<p>La rama DEV es la que tiene el código nuevo: nuevas releases que seincluirán en el futuro, nuevas características etc... Se descarga en cada equipo para hacer pruebas.</p>
-		<h5>Commits</h5>
-		<p>Debemos ser lo más descriptivos posibles de los cambios realizados pero específicos.</p>
-		<ul>
-			<li>Poner siempre commists y lo más descriptivo posible.</li>
-			<li>La primera línea (50 chars) es la descripción</li>
-			<li>La segunda línea dejarla vacía para que git entienda que queremos hacer esa separación.</li>
-			<li>La tercera y siguientes líneas (72 chars por línea) llevan la descripción si es necesario.</li>
-			<li>Otra línea vacía</li>
-			<li>Esta última línea opcional es el footer del commit</li>
-		</ul>
-		<h5>Qué subir y qué no</h5>
-		<p>Por regla general no se deben subir archivos binarios, es decir imágenes, audios, vídeos... ya que Git no puede guardar cambios "demasiado exactos" de estos cambios. Otra razón es porque estos archivos suelen pesar bastante y se hace costoso para git a la hora de manejarlo.</p>
-		<h5>Merge</h5>
-		<p>Nunca hacer commit directamente a la rama Master ya que esta es la rama de producción y solo se deben hacer merge en ella de otra rama, por ejemplo de test o dev.</p>
-		<img src="img/giphy-merge.gif" />
+					<h3>Buenas pácticas GIT</h3>
+					<h5>Ramas (Branch)</h5>
+					<p>La rama MASTER es la que tiene el código que se desplegará en producción.</p>
+					<p>La rama TEST es la que tiene el código que se desplegará en TESTing para hacer pruebas.</p>
+					<p>La rama DEV es la que tiene el código nuevo: nuevas releases que seincluirán en el futuro, nuevas características etc... Se descarga en cada equipo para hacer pruebas.</p>
+					<h5>Commits</h5>
+					<p>Debemos ser lo más descriptivos posibles de los cambios realizados pero específicos.</p>
+					<ul>
+						<li>Poner siempre commists y lo más descriptivo posible.</li>
+						<li>La primera línea (50 chars) es la descripción</li>
+						<li>La segunda línea dejarla vacía para que git entienda que queremos hacer esa separación.</li>
+						<li>La tercera y siguientes líneas (72 chars por línea) llevan la descripción si es necesario.</li>
+						<li>Otra línea vacía</li>
+						<li>Esta última línea opcional es el footer del commit</li>
+					</ul>
+					<h5>Qué subir y qué no</h5>
+					<p>Por regla general no se deben subir archivos binarios, es decir imágenes, audios, vídeos... ya que Git no puede guardar cambios "demasiado exactos" de estos cambios. Otra razón es porque estos archivos suelen pesar bastante y se hace costoso para git a la hora de manejarlo.</p>
+					<h5>Merge</h5>
+					<p>Nunca hacer commit directamente a la rama Master ya que esta es la rama de producción y solo se deben hacer merge en ella de otra rama, por ejemplo de test o dev.</p>
+					<img src="img/giphy-merge.gif" />
+				</div>
+			</div>
+		</div>
+		
 	</body>
 </html>
