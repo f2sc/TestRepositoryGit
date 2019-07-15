@@ -33,5 +33,21 @@
 			<li>pull : Sirve para traerse todo el código.</li>
 			<li>reset : Elimina el commit y deja los cambios en stage y con --hard elimina totalmente los cambios.</li>
 		</ul>
+
+		<h3>Buenas pácticas GIT</h3>
+		<h5>Ramas (Branch)</h5>
+		<p>La rama MASTER es la que tiene el código que se desplegará en producción.</p>
+		<p>La rama TEST es la que tiene el código que se desplegará en TESTing para hacer pruebas.</p>
+		<p>La rama DEV es la que tiene el código nuevo: nuevas releases que seincluirán en el futuro, nuevas características etc... Se descarga en cada equipo para hacer pruebas.</p>
+		<h5>Commits</h5>
+		<p>Debemos ser lo más descriptivos posibles de los cambios realizados pero específicos.</p>
+		<ul>
+			<li>Poner siempre commists y lo más descriptivo posible.</li>
+			<li>La primera línea (50 chars) es la descripción</li>
+			<li>La segunda línea dejarla vacía para que git entienda que queremos hacer esa separación.</li>
+			<li>La tercera y siguientes líneas (72 chars por línea) llevan la descripción si es necesario.</li>
+			<li>Otra línea vacía</li>
+			<li>Esta última línea opcional es el footer del commit</li>
+		</ul>
 	</body>
 </html>
